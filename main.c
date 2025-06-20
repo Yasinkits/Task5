@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main()
 {
-    int Total_Purchase_Amount;
-    int Total_final_amount;
-    printf("Enter the Total Purchase Amount:\n");
-    scanf("%d", &Total_Purchase_Amount);
+    int Employee_Years_of_service;
+    int Basic_salary;
+    int Final_Salary;
+    float Bonus ;
+    printf("Enter the the Years Of Service:\n");
+    scanf("%d", &Employee_Years_of_service);
+    printf("Enter the Basic Salary:\n");
+    scanf("%d" ,&Basic_salary);
 
-     if(Total_Purchase_Amount> 1000){
-         Total_final_amount =Total_Purchase_Amount *0.9;
-         printf("A 10percent discount has been given the discount.\n");
-         printf("The total Final amount to pay is:%.2d\n",Total_final_amount);
-         }else{
-           printf("Dear customer no discount applied.\n");
-           printf("Final amount to pay is: %.2d\n",Total_Purchase_Amount);
-         }
-
+    if (Employee_Years_of_service > 5){
+     Bonus = 0.05 * Basic_salary;
+     Final_Salary = Basic_salary + Bonus;
+      printf("The Final salary for the employee is:%.2d\n", Final_Salary);
+    }else{
+      printf("5 years of service not yet met please continue working with us\n");
+    }
     return 0;
 }

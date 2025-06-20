@@ -2,7 +2,11 @@
 #include <stdlib.h>
 int main()
 {
-      printf("5 years of service not yet met please continue working with us\n");
+  int Salary, Years_of_employment;
+  printf("Enter the Salary:\n");
+  scanf("%d", &Salary);
+  printf("Enter the years you have been employed in this company\n");
+  scanf("%d", &Years_of_employment);
     if(Salary >= 5000 || Years_of_employment>2){
     printf("You are eligible for the loan.\n");
     }else {

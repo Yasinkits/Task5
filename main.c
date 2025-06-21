@@ -2,15 +2,15 @@
 #include <stdlib.h>
 int main()
 {
- int Withdrawal,Net;
- printf("Enter the Amount you want to Withdraw:\n");
- scanf("%d", &Withdrawal);
- if(Withdrawal < 500){
-  Net = Withdrawal -10;
- }else {
-   Net = Withdrawal;
+ int Units_consumed;
+ double Bill;
+ printf("Enter the units Consumed:\n");
+ scanf("%d", &Units_consumed);
+ if (Units_consumed < 200){
+    Bill = Units_consumed *0.50;
+ }else{
+    Bill= Units_consumed* 0.75;
  }
- printf("Net amount received : %.2d\n", Net);
-
+ printf("The total bill is:%.2lf", Bill);
 return 0;
 }

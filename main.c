@@ -2,15 +2,18 @@
 #include <stdlib.h>
 int main()
 {
- int Purchase_amount,Tax,Total_Payable;
- printf("Enter the purchase amount:\n");
- scanf("%d", &Purchase_amount);
- if(Purchase_amount<500){
-    Tax = 0.05* Purchase_amount;
+ int hourly_rate, hours_worked,Salary;
+ printf("Please enter the hours worked:\n");
+ scanf("%d", &hours_worked);
+ printf("Please enter the hourly rate:\n");
+ scanf("%d", &hourly_rate);
+
+ if (hours_worked>40){
+    int overtime = hours_worked -40;
+    Salary = (40*hourly_rate + overtime*hourly_rate*1.5);
     }else{
-    Tax =0.08 * Purchase_amount;
+    Salary= hours_worked*hourly_rate;
     }
-   Total_Payable = Purchase_amount + Tax;
-    printf("The total payable amount with Tax is %.2d\n",Total_Payable);
+    printf("The Total salary is : %.2d\n", Salary);
 return 0;
 }

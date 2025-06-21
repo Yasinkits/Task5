@@ -2,19 +2,15 @@
 #include <stdlib.h>
 int main()
 {
-int Membership_Duration;
-double Total_Membership_fee,Final_payable_amount,Discount;
-printf("Enter the Membership Duration:\n");
-scanf("%d", &Membership_Duration);
-printf("Enter the Total Membership fee:\n");
-scanf("%lf", &Total_Membership_fee);
-if(Membership_Duration >=1 && Membership_Duration <=3){
-     Discount= 0.05;
-   }else if(Membership_Duration >= 4){
-   Discount =0.1;
-   }
-    Final_payable_amount = Total_Membership_fee* (1- Discount);
-   printf("The final payable amount : %.2lf",Final_payable_amount);
-
+ int Price_Per_Unit,Quantity,Total_Amount;
+ printf("Enter the Price per unit:\n");
+ scanf("%d",&Price_Per_Unit);
+ printf("Enter the Quantity\n");
+ scanf("%d",&Quantity);
+ Total_Amount =Price_Per_Unit*Quantity;
+ if (Quantity >=10){
+     Total_Amount *= 0.85;
+ }
+ printf("The total cost is:%.2d\n",Total_Amount);
 return 0;
 }

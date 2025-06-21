@@ -2,15 +2,19 @@
 #include <stdlib.h>
 int main()
 {
- int Units_consumed;
- double Bill;
- printf("Enter the units Consumed:\n");
- scanf("%d", &Units_consumed);
- if (Units_consumed < 200){
-    Bill = Units_consumed *0.50;
- }else{
-    Bill= Units_consumed* 0.75;
- }
- printf("The total bill is:%.2lf", Bill);
+int Membership_Duration;
+double Total_Membership_fee,Final_payable_amount,Discount;
+printf("Enter the Membership Duration:\n");
+scanf("%d", &Membership_Duration);
+printf("Enter the Total Membership fee:\n");
+scanf("%lf", &Total_Membership_fee);
+if(Membership_Duration >=1 && Membership_Duration <=3){
+     Discount= 0.05;
+   }else if(Membership_Duration >= 4){
+   Discount =0.1;
+   }
+    Final_payable_amount = Total_Membership_fee* (1- Discount);
+   printf("The final payable amount : %.2lf",Final_payable_amount);
+
 return 0;
 }

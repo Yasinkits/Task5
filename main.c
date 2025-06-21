@@ -2,17 +2,15 @@
 #include <stdlib.h>
 int main()
 {
-  double Cost_price,Selling_price;
-  printf("Enter the Cost price:\n");
-  scanf("%lf", &Cost_price);
-  printf("Enter the Selling Price:\n");
-  scanf("%lf", &Selling_price);
-  double Amount= Selling_price-Cost_price;
-  if(Amount > 0){
-    printf("Profit : %.2lf\n", Amount);
-  }else if(Amount < 0){
-    printf("Loss: %.2lf",-Amount);
-  }
+ int Withdrawal,Net;
+ printf("Enter the Amount you want to Withdraw:\n");
+ scanf("%d", &Withdrawal);
+ if(Withdrawal < 500){
+  Net = Withdrawal -10;
+ }else {
+   Net = Withdrawal;
+ }
+ printf("Net amount received : %.2d\n", Net);
 
 return 0;
 }
